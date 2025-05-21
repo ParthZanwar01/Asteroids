@@ -1,7 +1,4 @@
-/*
-CLASS: Asteroid
-DESCRIPTION: A polygon-shaped asteroid that moves around in space.
-*/
+
 import java.awt.*;
 import java.util.Random;
 

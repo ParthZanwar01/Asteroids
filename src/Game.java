@@ -1,9 +1,4 @@
-/*
-CLASS: Game
-DESCRIPTION: A painted canvas in its own window, updated every tenth second.
-USAGE: Extended by Asteroids.
-NOTE: You don't need to understand the details here, no fiddling necessary.
-*/
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.Timer;
@@ -38,8 +33,6 @@ abstract class Game extends Canvas {
         setFocusable(true);
         requestFocus();
 
-        // Initialize the timer but don't start it here
-        // The subclass will handle starting its own timer
         updateTimer = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,18 +48,14 @@ abstract class Game extends Canvas {
     public void update(Graphics brush) {
         paint(buffer.getGraphics());
         brush.drawImage(buffer, 0, 0, this);
-        // Remove the sleep and repaint calls from here since
-        // the timer in the subclass will handle the timing
     }
 
-    // Method to start the timer if needed by subclasses
     protected void startTimer() {
         if (updateTimer != null && !updateTimer.isRunning()) {
             updateTimer.start();
         }
     }
 
-    // Method to stop the timer if needed by subclasses
     protected void stopTimer() {
         if (updateTimer != null && updateTimer.isRunning()) {
             updateTimer.stop();

@@ -1,7 +1,3 @@
-/*
-CLASS: Asteroids
-DESCRIPTION: Main game class that manages all game elements and implements the game loop.
-*/
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -49,7 +45,7 @@ class Asteroids extends Game {
         setFocusable(true);
         requestFocus();
 
-        // Replace Thread.sleep with Timer
+
         gameTimer = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -151,7 +147,7 @@ class Asteroids extends Game {
 
         if (lives <= 0) {
             gameOver = true;
-            gameTimer.stop(); // Stop the timer when game is over
+            gameTimer.stop();
         } else {
             ship = new Ship(width, height);
             addKeyListener(ship);
@@ -244,7 +240,7 @@ class Asteroids extends Game {
 
         bullets.clear();
 
-        // Restart the timer
+
         if (!gameTimer.isRunning()) {
             gameTimer.start();
         }

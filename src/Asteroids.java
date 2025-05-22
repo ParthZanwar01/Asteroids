@@ -88,6 +88,7 @@ class Asteroids extends Game {
                 bullet.paint(brush);
             }
         }
+
         bullets.removeAll(expiredBullets);
 
         ArrayList<Asteroid> destroyedAsteroids = new ArrayList<>();

@@ -18,9 +18,7 @@ class Circle extends Shape {
 
 
     public boolean contains(Point p) {
-        double distance = Math.sqrt(
-                Math.pow(position.x - p.x, 2) +
-                        Math.pow(position.y - p.y, 2)
+        double distance = Math.sqrt(Math.pow(position.x - p.x, 2) + Math.pow(position.y - p.y, 2)
         );
         return distance <= radius;
     }

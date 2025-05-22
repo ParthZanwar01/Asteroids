@@ -82,8 +82,7 @@ class Asteroids extends Game {
         for (Bullet bullet : bullets) {
             bullet.move();
 
-            if (bullet.position.x < 0 || bullet.position.x > width ||
-                    bullet.position.y < 0 || bullet.position.y > height) {
+            if (bullet.position.x < 0 || bullet.position.x > width || bullet.position.y < 0 || bullet.position.y > height) {
                 expiredBullets.add(bullet);
             } else {
                 bullet.paint(brush);

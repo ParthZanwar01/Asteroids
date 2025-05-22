@@ -13,8 +13,4 @@ class Point {
     y = inY;
   }
 
-
-  public Point clone() {
-    return new Point(x, y);
-  }
 }

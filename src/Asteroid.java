@@ -9,10 +9,7 @@ class Asteroid extends Polygon {
 
 
     public Asteroid(int width, int height, int size) {
-        super(
-                createAsteroidShape(size),
-                createRandomPosition(width, height),
-                new Random().nextDouble() * 360
+        super(createAsteroidShape(size), createRandomPosition(width, height), new Random().nextDouble() * 360
         );
 
         this.width = width;
@@ -26,9 +23,7 @@ class Asteroid extends Polygon {
 
         double speed = (4 - size) * 0.5;
         double angle = random.nextDouble() * 2 * Math.PI;
-        setVelocity(new Point(
-                speed * Math.cos(angle),
-                speed * Math.sin(angle)
+        setVelocity(new Point(speed * Math.cos(angle), speed * Math.sin(angle)
         ));
     }
 

@@ -13,15 +13,7 @@ class Ship extends Polygon implements KeyListener {
 
     public Ship(int width, int height) {
 
-        super(
-                new Point[] {
-                        new Point(-10, -10),
-                        new Point(20, 0),
-                        new Point(-10, 10)
-                },
-                new Point(width/2, height/2),
-                0
-        );
+        super(new Point[] {new Point(-10, -10), new Point(20, 0), new Point(-10, 10)}, new Point(width/2, height/2), 0);
 
         this.width = width;
         this.height = height;

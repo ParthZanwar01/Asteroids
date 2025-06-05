@@ -21,7 +21,6 @@ A classic-style **Asteroids** arcade game built in Java. The player controls a s
 ## 📦 Technologies Used
 
 - Java 8+
-- Java2D or JavaFX (depending on implementation)
 - Object-Oriented Programming (OOP) principles
 
 ## ▶️ How to Run
